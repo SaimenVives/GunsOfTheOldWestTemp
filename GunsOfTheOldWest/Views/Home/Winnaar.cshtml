@@ -1,0 +1,33 @@
+﻿@model User
+
+
+@{
+    ViewBag.Title = "Scherpschutter!";
+}
+
+<h1 class="display-4">@ViewBag.Title</h1>
+
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="Voornaam" class="form-label"></label>
+        <input required asp-for="Voornaam" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Familienaam" class="form-label">Last Name</label>
+        <input required asp-for="Familienaam" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input required asp-for="Email" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Telefoonnummer" class="form-label"></label>
+        <input required asp-for="Telefoonnummer" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Versturen</button>
+
+
+</form>
+
+<a asp-controller="Home" asp-action="Index" class="btn btn-primary">Terug</a>
